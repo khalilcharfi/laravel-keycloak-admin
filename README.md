@@ -4,7 +4,7 @@ composer require kcharfi/keycloak-admin
 ```
 
 ```text
-php artisan vendor:publish  --provider="Kcharfi\Keycloak\Admin\KeycloakServiceProvider"
+php artisan vendor:publish  --provider="Kcharfi\Laravel\Keycloak\Admin\KeycloakServiceProvider"
 ```
 
 
