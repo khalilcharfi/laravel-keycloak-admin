@@ -4,6 +4,10 @@
     "type": "library",
     "license": "MIT",
     "minimum-stability": "dev",
+    "keywords": [
+        "laravel",
+        "keycloak"
+    ],
     "authors": [
         {
             "name": "Khalil Charfi",
