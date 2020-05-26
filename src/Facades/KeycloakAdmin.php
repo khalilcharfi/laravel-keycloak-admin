@@ -2,14 +2,14 @@
 
 namespace App\Laravel\Keycloak\Admin\Facades;
 
-use App\Keycloak\Admin\Client;
-use App\Keycloak\Admin\Resources\ClientResourceInterface;
-use App\Keycloak\Admin\Resources\ClientsResourceInterface;
-use App\Keycloak\Admin\Resources\RealmResourceInterface;
-use App\Keycloak\Admin\Resources\RealmsResourceInterface;
-use App\Keycloak\Admin\Resources\RolesResourceInterface;
-use App\Keycloak\Admin\Resources\UserResourceInterface;
-use App\Keycloak\Admin\Resources\UsersResourceInterface;
+use App\Laravel\Keycloak\Admin\Client;
+use App\Laravel\Keycloak\Admin\Resources\ClientResourceInterface;
+use App\Laravel\Keycloak\Admin\Resources\ClientsResourceInterface;
+use App\Laravel\Keycloak\Admin\Resources\RealmResourceInterface;
+use App\Laravel\Keycloak\Admin\Resources\RealmsResourceInterface;
+use App\Laravel\Keycloak\Admin\Resources\RolesResourceInterface;
+use App\Laravel\Keycloak\Admin\Resources\UserResourceInterface;
+use App\Laravel\Keycloak\Admin\Resources\UsersResourceInterface;
 use Illuminate\Support\Facades\Facade;
 
 /**

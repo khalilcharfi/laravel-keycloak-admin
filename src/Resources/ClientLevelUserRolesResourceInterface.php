@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Keycloak\Admin\Resources;
+namespace App\Laravel\Keycloak\Admin\Resources;
 
-use App\Keycloak\Admin\Representations\RepresentationCollectionInterface;
-use App\Keycloak\Admin\Representations\RoleRepresentationInterface;
+use App\Laravel\Keycloak\Admin\Representations\RepresentationCollectionInterface;
+use App\Laravel\Keycloak\Admin\Representations\RoleRepresentationInterface;
 
 interface ClientLevelUserRolesResourceInterface
 {

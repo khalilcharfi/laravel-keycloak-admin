@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Keycloak\Admin\Representations;
+namespace App\Laravel\Keycloak\Admin\Representations;
 
 class RealmRepresentation extends AbstractRepresentation implements RealmRepresentationInterface
 {

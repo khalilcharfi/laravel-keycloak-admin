@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Keycloak\Admin;
+namespace App\Laravel\Keycloak\Admin;
 
-use App\Keycloak\Admin\Guzzle\DefaultHeadersMiddleware;
-use App\Keycloak\Admin\Guzzle\TokenMiddleware;
-use App\Keycloak\Admin\Hydrator\Hydrator;
-use App\Keycloak\Admin\Resources\ResourceFactory;
-use App\Keycloak\Admin\Token\TokenManager;
+use App\Laravel\Keycloak\Admin\Guzzle\DefaultHeadersMiddleware;
+use App\Laravel\Keycloak\Admin\Guzzle\TokenMiddleware;
+use App\Laravel\Keycloak\Admin\Hydrator\Hydrator;
+use App\Laravel\Keycloak\Admin\Resources\ResourceFactory;
+use App\Laravel\Keycloak\Admin\Token\TokenManager;
 use GuzzleHttp\Client as GuzzleClient;
 use GuzzleHttp\ClientInterface;
 use GuzzleHttp\HandlerStack;

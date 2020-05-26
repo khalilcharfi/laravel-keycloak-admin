@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Keycloak\Admin\Tests\Browser;
+namespace App\Laravel\Keycloak\Admin\Tests\Browser;
 
-use App\Keycloak\Admin\Tests\TestCase;
-use App\Keycloak\Admin\Tests\Traits\WithDuskBrowser;
-use App\Keycloak\Admin\Tests\Traits\WithTemporaryRealm;
+use App\Laravel\Keycloak\Admin\Tests\TestCase;
+use App\Laravel\Keycloak\Admin\Tests\Traits\WithDuskBrowser;
+use App\Laravel\Keycloak\Admin\Tests\Traits\WithTemporaryRealm;
 use Laravel\Dusk\Browser;
 
 /**

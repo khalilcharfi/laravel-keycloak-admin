@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Keycloak\Admin\Tests\Traits;
+namespace App\Laravel\Keycloak\Admin\Tests\Traits;
 
 use Facebook\WebDriver\Chrome\ChromeOptions;
 use Facebook\WebDriver\Remote\DesiredCapabilities;

@@ -1,13 +1,13 @@
 <?php
 
-namespace App\Keycloak\Admin\Resources;
+namespace App\Laravel\Keycloak\Admin\Resources;
 
-use App\Keycloak\Admin\Exceptions\CannotCreateUserException;
-use App\Keycloak\Admin\Exceptions\CannotDeleteUserException;
-use App\Keycloak\Admin\Exceptions\CannotUpdateUserException;
-use App\Keycloak\Admin\Exceptions\UnknownUserException;
-use App\Keycloak\Admin\Hydrator\HydratorInterface;
-use App\Keycloak\Admin\Representations\UserRepresentationInterface;
+use App\Laravel\Keycloak\Admin\Exceptions\CannotCreateUserException;
+use App\Laravel\Keycloak\Admin\Exceptions\CannotDeleteUserException;
+use App\Laravel\Keycloak\Admin\Exceptions\CannotUpdateUserException;
+use App\Laravel\Keycloak\Admin\Exceptions\UnknownUserException;
+use App\Laravel\Keycloak\Admin\Hydrator\HydratorInterface;
+use App\Laravel\Keycloak\Admin\Representations\UserRepresentationInterface;
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
 

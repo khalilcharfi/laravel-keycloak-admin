@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Keycloak\Admin\Tests\Traits;
+namespace App\Laravel\Keycloak\Admin\Tests\Traits;
 
-use App\Keycloak\Admin\Client;
-use App\Keycloak\Admin\ClientBuilder;
+use App\Laravel\Keycloak\Admin\Client;
+use App\Laravel\Keycloak\Admin\ClientBuilder;
 
 trait WithTestClient
 {

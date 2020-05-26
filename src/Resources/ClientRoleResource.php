@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Keycloak\Admin\Resources;
+namespace App\Laravel\Keycloak\Admin\Resources;
 
-use App\Keycloak\Admin\Exceptions\CannotRetrieveRoleException;
-use App\Keycloak\Admin\Hydrator\HydratorInterface;
-use App\Keycloak\Admin\Representations\RoleRepresentation;
+use App\Laravel\Keycloak\Admin\Exceptions\CannotRetrieveRoleException;
+use App\Laravel\Keycloak\Admin\Hydrator\HydratorInterface;
+use App\Laravel\Keycloak\Admin\Representations\RoleRepresentation;
 use GuzzleHttp\ClientInterface;
 
 class ClientRoleResource implements ClientRoleResourceInterface

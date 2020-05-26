@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Keycloak\Admin\Resources;
+namespace App\Laravel\Keycloak\Admin\Resources;
 
-use App\Keycloak\Admin\Exceptions\CannotCreateRealmException;
-use App\Keycloak\Admin\Hydrator\HydratorInterface;
-use App\Keycloak\Admin\Representations\RealmRepresentationInterface;
+use App\Laravel\Keycloak\Admin\Exceptions\CannotCreateRealmException;
+use App\Laravel\Keycloak\Admin\Hydrator\HydratorInterface;
+use App\Laravel\Keycloak\Admin\Representations\RealmRepresentationInterface;
 use GuzzleHttp\ClientInterface;
 
 class RealmsResource implements RealmsResourceInterface

@@ -1,15 +1,15 @@
 <?php
 
-namespace App\Keycloak\Admin\Resources;
+namespace App\Laravel\Keycloak\Admin\Resources;
 
-use App\Keycloak\Admin\Exceptions\CannotCreateRoleException;
-use App\Keycloak\Admin\Exceptions\CannotRetrieveRoleException;
-use App\Keycloak\Admin\Exceptions\CannotUpdateRoleException;
-use App\Keycloak\Admin\Hydrator\HydratorInterface;
-use App\Keycloak\Admin\Representations\RepresentationCollection;
-use App\Keycloak\Admin\Representations\RepresentationCollectionInterface;
-use App\Keycloak\Admin\Representations\RoleRepresentation;
-use App\Keycloak\Admin\Representations\RoleRepresentationInterface;
+use App\Laravel\Keycloak\Admin\Exceptions\CannotCreateRoleException;
+use App\Laravel\Keycloak\Admin\Exceptions\CannotRetrieveRoleException;
+use App\Laravel\Keycloak\Admin\Exceptions\CannotUpdateRoleException;
+use App\Laravel\Keycloak\Admin\Hydrator\HydratorInterface;
+use App\Laravel\Keycloak\Admin\Representations\RepresentationCollection;
+use App\Laravel\Keycloak\Admin\Representations\RepresentationCollectionInterface;
+use App\Laravel\Keycloak\Admin\Representations\RoleRepresentation;
+use App\Laravel\Keycloak\Admin\Representations\RoleRepresentationInterface;
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
 use function json_encode;

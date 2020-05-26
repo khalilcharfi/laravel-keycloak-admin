@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Keycloak\Admin\Token;
+namespace App\Laravel\Keycloak\Admin\Token;
 
 use DateTime;
 use function date_create;

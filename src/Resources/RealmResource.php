@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Keycloak\Admin\Resources;
+namespace App\Laravel\Keycloak\Admin\Resources;
 
-use App\Keycloak\Admin\Exceptions\CannotDeleteRealmException;
-use App\Keycloak\Admin\Exceptions\CannotRetrieveRealmRepresentationException;
-use App\Keycloak\Admin\Hydrator\HydratorInterface;
-use App\Keycloak\Admin\Representations\RealmRepresentation;
-use App\Keycloak\Admin\Representations\RealmRepresentationInterface;
+use App\Laravel\Keycloak\Admin\Exceptions\CannotDeleteRealmException;
+use App\Laravel\Keycloak\Admin\Exceptions\CannotRetrieveRealmRepresentationException;
+use App\Laravel\Keycloak\Admin\Hydrator\HydratorInterface;
+use App\Laravel\Keycloak\Admin\Representations\RealmRepresentation;
+use App\Laravel\Keycloak\Admin\Representations\RealmRepresentationInterface;
 use GuzzleHttp\ClientInterface;
 use function json_decode;
 

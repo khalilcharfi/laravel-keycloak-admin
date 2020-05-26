@@ -2,7 +2,7 @@
 
 namespace App\Laravel\Keycloak\Admin;
 
-use App\Keycloak\Admin\ClientBuilder;
+use App\Laravel\Keycloak\Admin\ClientBuilder;
 use Illuminate\Support\Arr;
 use InvalidArgumentException;
 use RuntimeException;

@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Keycloak\Admin\Representations;
+namespace App\Laravel\Keycloak\Admin\Representations;
 
-use App\Keycloak\Admin\Hydrator\Hydrator;
+use App\Laravel\Keycloak\Admin\Hydrator\Hydrator;
 
 class RealmRepresentationBuilder extends AbstractRepresentationBuilder implements RealmRepresentationBuilderInterface
 {

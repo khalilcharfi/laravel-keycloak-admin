@@ -3,6 +3,7 @@
     "description": "Laravel client for the Keycloak Admin API",
     "type": "library",
     "license": "MIT",
+    "minimum-stability": "dev",
     "authors": [
         {
             "name": "Khalil Charfi",
@@ -11,12 +12,12 @@
     ],
     "autoload": {
         "psr-4": {
-            "Kcharfi\\Keycloak\\Admin\\": "src/"
+            "Kcharfi\\Laravel\\Keycloak\\Admin\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Kcharfi\\Keycloak\\Admin\\Tests\\": "tests/"
+            "Kcharfi\\Laravel\\Keycloak\\Admin\\Tests\\": "tests/"
         }
     },
     "require": {
@@ -28,14 +29,13 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Kcharfi\\Keycloak\\Admin\\KeycloakServiceProvider"
+                "Kcharfi\\Laravel\\Keycloak\\Admin\\KeycloakServiceProvider"
             ],
             "aliases": {
-                "KeycloakAdmin": "Kcharfi\\Keycloak\\Admin\\Facades\\Keycloak"
+                "KeycloakAdmin": "Kcharfi\\Laravel\\Keycloak\\Admin\\Facades\\Keycloak"
             }
         }
     },
-
     "require-dev": {
         "fzaninotto/faker": "1.9.1",
         "phpunit/phpunit": "8.5.5",

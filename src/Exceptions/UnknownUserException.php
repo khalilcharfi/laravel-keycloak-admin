@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Keycloak\Admin\Exceptions;
+namespace App\Laravel\Keycloak\Admin\Exceptions;
 
 use RuntimeException;
 

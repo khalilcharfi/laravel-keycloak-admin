@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Keycloak\Admin\Tests;
+namespace App\Laravel\Keycloak\Admin\Tests;
 
 use Illuminate\Foundation\Application;
 

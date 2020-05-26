@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Keycloak\Admin\Tests;
+namespace App\Laravel\Keycloak\Admin\Tests;
 
-use App\Keycloak\Admin\Representations\ClientRepresentationInterface;
-use App\Keycloak\Admin\Representations\RoleRepresentationInterface;
-use App\Keycloak\Admin\Representations\UserRepresentationInterface;
-use App\Keycloak\Admin\Resources\RealmResourceInterface;
-use App\Keycloak\Admin\Tests\Traits\WithTemporaryRealm;
+use App\Laravel\Keycloak\Admin\Representations\ClientRepresentationInterface;
+use App\Laravel\Keycloak\Admin\Representations\RoleRepresentationInterface;
+use App\Laravel\Keycloak\Admin\Representations\UserRepresentationInterface;
+use App\Laravel\Keycloak\Admin\Resources\RealmResourceInterface;
+use App\Laravel\Keycloak\Admin\Tests\Traits\WithTemporaryRealm;
 
 class UserRolesTest extends TestCase
 {

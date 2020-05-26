@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Keycloak\Admin\Resources;
+namespace App\Laravel\Keycloak\Admin\Resources;
 
-use App\Keycloak\Admin\Exceptions\CannotRetrieveClientException;
-use App\Keycloak\Admin\Hydrator\HydratorInterface;
-use App\Keycloak\Admin\Representations\ClientRepresentation;
-use App\Keycloak\Admin\Representations\ClientRepresentationInterface;
+use App\Laravel\Keycloak\Admin\Exceptions\CannotRetrieveClientException;
+use App\Laravel\Keycloak\Admin\Hydrator\HydratorInterface;
+use App\Laravel\Keycloak\Admin\Representations\ClientRepresentation;
+use App\Laravel\Keycloak\Admin\Representations\ClientRepresentationInterface;
 use GuzzleHttp\ClientInterface;
 
 class ClientResource implements ClientResourceInterface

@@ -2,7 +2,7 @@
 
 namespace App\Laravel\Keycloak\Admin\Builders;
 
-use App\Keycloak\Admin\Representations\RoleRepresentationInterface;
+use App\Laravel\Keycloak\Admin\Representations\RoleRepresentationInterface;
 
 /**
  * Class RoleRepresentationBuilderAdapter

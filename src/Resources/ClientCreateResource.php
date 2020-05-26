@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Keycloak\Admin\Resources;
+namespace App\Laravel\Keycloak\Admin\Resources;
 
-use App\Keycloak\Admin\Representations\ClientRepresentationBuilderInterface;
+use App\Laravel\Keycloak\Admin\Representations\ClientRepresentationBuilderInterface;
 
 class ClientCreateResource implements ClientCreateResourceInterface
 {

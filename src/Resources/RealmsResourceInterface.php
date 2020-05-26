@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Keycloak\Admin\Resources;
+namespace App\Laravel\Keycloak\Admin\Resources;
 
-use App\Keycloak\Admin\Representations\RealmRepresentationInterface;
+use App\Laravel\Keycloak\Admin\Representations\RealmRepresentationInterface;
 
 interface RealmsResourceInterface
 {

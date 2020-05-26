@@ -1,15 +1,15 @@
 <?php
 
-namespace App\Keycloak\Admin;
+namespace App\Laravel\Keycloak\Admin;
 
-use App\Keycloak\Admin\Exceptions\DefaultClientIdMissingException;
-use App\Keycloak\Admin\Exceptions\DefaultRealmMissingException;
-use App\Keycloak\Admin\Resources\ClientResourceInterface;
-use App\Keycloak\Admin\Resources\ClientsResourceInterface;
-use App\Keycloak\Admin\Resources\ResourceFactoryInterface;
-use App\Keycloak\Admin\Resources\RolesResourceInterface;
-use App\Keycloak\Admin\Resources\UserResourceInterface;
-use App\Keycloak\Admin\Resources\UsersResourceInterface;
+use App\Laravel\Keycloak\Admin\Exceptions\DefaultClientIdMissingException;
+use App\Laravel\Keycloak\Admin\Exceptions\DefaultRealmMissingException;
+use App\Laravel\Keycloak\Admin\Resources\ClientResourceInterface;
+use App\Laravel\Keycloak\Admin\Resources\ClientsResourceInterface;
+use App\Laravel\Keycloak\Admin\Resources\ResourceFactoryInterface;
+use App\Laravel\Keycloak\Admin\Resources\RolesResourceInterface;
+use App\Laravel\Keycloak\Admin\Resources\UserResourceInterface;
+use App\Laravel\Keycloak\Admin\Resources\UsersResourceInterface;
 
 class Client
 {

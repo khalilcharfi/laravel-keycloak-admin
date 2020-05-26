@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Keycloak\Admin\Resources;
+namespace App\Laravel\Keycloak\Admin\Resources;
 
-use App\Keycloak\Admin\Representations\RoleRepresentationBuilderInterface;
+use App\Laravel\Keycloak\Admin\Representations\RoleRepresentationBuilderInterface;
 use RuntimeException;
 
 class RoleUpdateResource implements RoleUpdateResourceInterface

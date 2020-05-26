@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Keycloak\Admin\Resources;
+namespace App\Laravel\Keycloak\Admin\Resources;
 
-use App\Keycloak\Admin\Exceptions\CannotRetrieveUsersException;
-use App\Keycloak\Admin\Hydrator\HydratorInterface;
-use App\Keycloak\Admin\Representations\RepresentationCollection;
-use App\Keycloak\Admin\Representations\UserRepresentation;
+use App\Laravel\Keycloak\Admin\Exceptions\CannotRetrieveUsersException;
+use App\Laravel\Keycloak\Admin\Hydrator\HydratorInterface;
+use App\Laravel\Keycloak\Admin\Representations\RepresentationCollection;
+use App\Laravel\Keycloak\Admin\Representations\UserRepresentation;
 use GuzzleHttp\ClientInterface;
 use RuntimeException;
 use function http_build_query;

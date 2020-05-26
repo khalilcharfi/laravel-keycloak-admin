@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Keycloak\Admin\Resources;
+namespace App\Laravel\Keycloak\Admin\Resources;
 
 interface RoleRepresentationCollectionInterface
 {

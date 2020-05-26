@@ -2,7 +2,7 @@
 
 namespace App\Laravel\Keycloak\Admin\Tests;
 
-use App\Keycloak\Admin\Representations\UserRepresentationInterface;
+use App\Laravel\Keycloak\Admin\Representations\UserRepresentationInterface;
 use App\Laravel\Keycloak\Admin\Facades\UserRepresentation;
 use Illuminate\Foundation\Testing\WithFaker;
 
