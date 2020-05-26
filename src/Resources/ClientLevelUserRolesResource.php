@@ -2,6 +2,7 @@
 
 namespace Kcharfi\Laravel\Keycloak\Admin\Resources;
 
+use Exception;
 use GuzzleHttp\ClientInterface;
 use Kcharfi\Laravel\Keycloak\Admin\Exceptions\CannotAssignRoleException;
 use Kcharfi\Laravel\Keycloak\Admin\Exceptions\CannotRetrieveUserRoleMappingsException;
@@ -66,12 +67,12 @@ class ClientLevelUserRolesResource implements ClientLevelUserRolesResourceInterf
 
     public function available(): RepresentationCollectionInterface
     {
-        throw new \Exception("TODO");
+        throw new Exception("TODO");
     }
 
     public function effective(): RepresentationCollectionInterface
     {
-        throw new \Exception("TODO");
+        throw new Exception("TODO");
     }
 
     public function add(RoleRepresentationInterface $role)

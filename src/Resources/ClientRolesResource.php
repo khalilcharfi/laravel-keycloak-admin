@@ -3,6 +3,7 @@
 namespace Kcharfi\Laravel\Keycloak\Admin\Resources;
 
 use GuzzleHttp\ClientInterface;
+use InvalidArgumentException;
 use Kcharfi\Laravel\Keycloak\Admin\Exceptions\CannotCreateRoleException;
 use Kcharfi\Laravel\Keycloak\Admin\Exceptions\CannotRetrieveRolesException;
 use Kcharfi\Laravel\Keycloak\Admin\Hydrator\HydratorInterface;
@@ -81,7 +82,7 @@ class ClientRolesResource implements ClientRolesResourceInterface
     public function add(RoleRepresentationInterface $role): ClientRoleResourceInterface
     {
         if (!$role->isClientRole()) {
-            throw new \InvalidArgumentException("The role is not a client role");
+            throw new InvalidArgumentException("The role is not a client role");
         }
 
         $data = $this->hydrator->extract($role);

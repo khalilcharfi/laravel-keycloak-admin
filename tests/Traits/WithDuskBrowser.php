@@ -2,14 +2,18 @@
 
 namespace Kcharfi\Laravel\Keycloak\Admin\Tests\Traits;
 
+use Closure;
+use Exception;
 use Facebook\WebDriver\Chrome\ChromeOptions;
 use Facebook\WebDriver\Remote\DesiredCapabilities;
 use Facebook\WebDriver\Remote\RemoteWebDriver;
 use Illuminate\Support\Collection;
 use Laravel\Dusk\Browser;
 use Laravel\Dusk\Chrome\SupportsChrome;
+use ReflectionFunction;
 use Symfony\Component\Filesystem\Filesystem;
 use Symfony\Component\Finder\Finder;
+use Throwable;
 
 trait WithDuskBrowser
 {
@@ -40,7 +44,7 @@ trait WithDuskBrowser
         }
     }
 
-    public static function afterClass(\Closure $callback)
+    public static function afterClass(Closure $callback)
     {
         static::$afterClassCallbacks[] = $callback;
     }
@@ -77,15 +81,15 @@ trait WithDuskBrowser
         );
     }
 
-    public function browse(\Closure $callback)
+    public function browse(Closure $callback)
     {
         $browsers = $this->createBrowsersFor($callback);
         try {
             $callback(...$browsers->all());
-        } catch (\Exception $e) {
+        } catch (Exception $e) {
             $this->captureFailuresFor($browsers);
             throw $e;
-        } catch (\Throwable $e) {
+        } catch (Throwable $e) {
             $this->captureFailuresFor($browsers);
             throw $e;
         } finally {
@@ -93,7 +97,7 @@ trait WithDuskBrowser
         }
     }
 
-    protected function createBrowsersFor(\Closure $callback)
+    protected function createBrowsersFor(Closure $callback)
     {
         if (count(static::$browsers) === 0) {
             static::$browsers = collect([new Browser($this->createWebDriver())]);
@@ -122,9 +126,9 @@ trait WithDuskBrowser
         );
     }
 
-    protected function browsersNeededFor(\Closure $callback)
+    protected function browsersNeededFor(Closure $callback)
     {
-        return (new \ReflectionFunction($callback))->getNumberOfParameters();
+        return (new ReflectionFunction($callback))->getNumberOfParameters();
     }
 
     protected function captureFailuresFor(Collection $browsers)

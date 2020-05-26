@@ -7,6 +7,7 @@ use Kcharfi\Laravel\Keycloak\Admin\Representations\RoleRepresentationInterface;
 use Kcharfi\Laravel\Keycloak\Admin\Representations\UserRepresentationInterface;
 use Kcharfi\Laravel\Keycloak\Admin\Resources\RealmResourceInterface;
 use Kcharfi\Laravel\Keycloak\Admin\Tests\Traits\WithTemporaryRealm;
+use RuntimeException;
 
 class UserRolesTest extends TestCase
 {
@@ -35,7 +36,7 @@ class UserRolesTest extends TestCase
             ->first();
 
         if (!$user instanceof UserRepresentationInterface) {
-            throw new \RuntimeException("Admin user does not exist");
+            throw new RuntimeException("Admin user does not exist");
         }
 
         $client = $this->client
@@ -47,7 +48,7 @@ class UserRolesTest extends TestCase
             });
 
         if (!$client instanceof ClientRepresentationInterface) {
-            throw new \RuntimeException("Cannot find client 'account'");
+            throw new RuntimeException("Cannot find client 'account'");
         }
 
         $id = $user->getId();

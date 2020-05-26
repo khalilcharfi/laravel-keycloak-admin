@@ -42,6 +42,16 @@ class ClientManager
         return $this->connections[$name];
     }
 
+    /**
+     * Get the default connection name.
+     *
+     * @return string
+     */
+    public function getDefaultConnection()
+    {
+        return $this->app['config']['keycloak-admin.default'];
+    }
+
     protected function makeConnection($name)
     {
         $config = $this->configuration($name);
@@ -76,15 +86,5 @@ class ClientManager
         }
 
         return $config;
-    }
-
-    /**
-     * Get the default connection name.
-     *
-     * @return string
-     */
-    public function getDefaultConnection()
-    {
-        return $this->app['config']['keycloak-admin.default'];
     }
 }

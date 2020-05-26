@@ -1,4 +1,5 @@
 <?php
+
 namespace Kcharfi\Laravel\Keycloak\Admin\Tests;
 
 use Kcharfi\Laravel\Keycloak\Admin\Representations\ClientRepresentationInterface;
@@ -28,29 +29,29 @@ class ClientsTest extends TestCase
     /**
      * @test
      */
-     public function client_roles_can_be_retrieved() {
+    public function client_roles_can_be_retrieved()
+    {
 
-         // Find the id of the client "account"
-         /* @var $client ClientRepresentationInterface */
-         $client = $this->client
-             ->realm('master')
-             ->clients()
-             ->all()
-             ->filter(function(ClientRepresentationInterface $client) {
-                 return $client->getClientId() == 'account';
-             })
-             ->first();
+        // Find the id of the client "account"
+        /* @var $client ClientRepresentationInterface */
+        $client = $this->client
+            ->realm('master')
+            ->clients()
+            ->all()
+            ->filter(function (ClientRepresentationInterface $client) {
+                return $client->getClientId() == 'account';
+            })
+            ->first();
 
-         $role = $this->client
-             ->realm('master')
-             ->client($client->getId())
-             ->roles()
-             ->all()
-             ->first(function (RoleRepresentationInterface $role) {
-                 return 'manage-account' === $role->getName();
-             });
+        $role = $this->client
+            ->realm('master')
+            ->client($client->getId())
+            ->roles()
+            ->all()
+            ->first(function (RoleRepresentationInterface $role) {
+                return 'manage-account' === $role->getName();
+            });
 
-         $this->assertInstanceOf(RoleRepresentationInterface::class, $role);
-
-     }
+        $this->assertInstanceOf(RoleRepresentationInterface::class, $role);
+    }
 }

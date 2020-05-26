@@ -9,8 +9,7 @@ class RealmRepresentation extends AbstractRepresentation implements RealmReprese
         ?string $name = null,
         ?string $displayName = null,
         ?bool $enabled = null
-    )
-    {
+    ) {
         $this->setAttributes(get_defined_vars());
     }
 

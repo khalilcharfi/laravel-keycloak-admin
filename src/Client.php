@@ -41,11 +41,6 @@ class Client
         return $this->resourceFactory->createUsersResource($this->checkDefaultRealm());
     }
 
-    public function user(string $id): UserResourceInterface
-    {
-        return $this->resourceFactory->createUserResource($this->checkDefaultRealm(), $id);
-    }
-
     private function checkDefaultRealm()
     {
         if (null === $this->defaultRealm) {
@@ -54,12 +49,9 @@ class Client
         return $this->defaultRealm;
     }
 
-    private function checkDefaultClientId()
+    public function user(string $id): UserResourceInterface
     {
-        if (null === $this->defaultClientId) {
-            throw new DefaultClientIdMissingException("The default client id is not set");
-        }
-        return $this->defaultClientId;
+        return $this->resourceFactory->createUserResource($this->checkDefaultRealm(), $id);
     }
 
     public function roles(): RolesResourceInterface
@@ -78,6 +70,14 @@ class Client
             $id = $this->checkDefaultClientId();
         }
         return $this->resourceFactory->createClientResource($this->checkDefaultRealm(), $id);
+    }
+
+    private function checkDefaultClientId()
+    {
+        if (null === $this->defaultClientId) {
+            throw new DefaultClientIdMissingException("The default client id is not set");
+        }
+        return $this->defaultClientId;
     }
 
     public function realms()

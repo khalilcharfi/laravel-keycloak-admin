@@ -2,11 +2,11 @@
 
 namespace Kcharfi\Laravel\Keycloak\Admin\Tests;
 
+use Illuminate\Foundation\Testing\WithFaker;
 use Kcharfi\Laravel\Keycloak\Admin\Client;
+use Kcharfi\Laravel\Keycloak\Admin\Facades\KeycloakAdmin;
 use Kcharfi\Laravel\Keycloak\Admin\Resources\RolesResource;
 use Kcharfi\Laravel\Keycloak\Admin\Resources\UsersResource;
-use Kcharfi\Laravel\Keycloak\Admin\Facades\KeycloakAdmin;
-use Illuminate\Foundation\Testing\WithFaker;
 use RuntimeException;
 
 class KeycloakFacadeTest extends TestCase

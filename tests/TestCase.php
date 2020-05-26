@@ -3,7 +3,6 @@
 
 use Kcharfi\Laravel\Keycloak\Admin\KeycloakServiceProvider;
 
-
 abstract class TestCase extends \PHPUnit\Framework\TestCase
 {
     protected function assertValidKeycloakId($id)
