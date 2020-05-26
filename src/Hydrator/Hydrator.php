@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Laravel\Keycloak\Admin\Hydrator;
+namespace Kcharfi\Laravel\Keycloak\Admin\Hydrator;
 
-use App\Laravel\Keycloak\Admin\Exceptions\AnnotationException;
+use Kcharfi\Laravel\Keycloak\Admin\Exceptions\AnnotationException;
 use ReflectionClass;
 use ReflectionMethod;
 use ReflectionParameter;

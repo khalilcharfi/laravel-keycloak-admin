@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Laravel\Keycloak\Admin\Exceptions;
+namespace Kcharfi\Laravel\Keycloak\Admin\Exceptions;
 
 class ApiConnectionException
 {

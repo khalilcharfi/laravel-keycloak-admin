@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Laravel\Keycloak\Admin\Guzzle;
+namespace Kcharfi\Laravel\Keycloak\Admin\Guzzle;
 
 use Psr\Http\Message\RequestInterface;
 

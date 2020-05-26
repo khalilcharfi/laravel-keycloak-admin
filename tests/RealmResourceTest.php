@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Laravel\Keycloak\Admin\Tests;
+namespace Kcharfi\Laravel\Keycloak\Admin\Tests;
 
-use App\Laravel\Keycloak\Admin\Representations\RealmRepresentationInterface;
-use App\Laravel\Keycloak\Admin\Tests\Traits\WithTemporaryRealm;
+use Kcharfi\Laravel\Keycloak\Admin\Representations\RealmRepresentationInterface;
+use Kcharfi\Laravel\Keycloak\Admin\Tests\Traits\WithTemporaryRealm;
 
 class RealmResourceTest extends TestCase
 {

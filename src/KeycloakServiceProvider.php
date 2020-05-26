@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Laravel\Keycloak\Admin;
+namespace Kcharfi\Laravel\Keycloak\Admin;
 
-use App\Laravel\Keycloak\Admin\Builders\RoleRepresentationBuilderAdapter;
-use App\Laravel\Keycloak\Admin\Builders\UserRepresentationBuilderAdapter;
-use App\Laravel\Keycloak\Admin\Representations\RoleRepresentationBuilder;
-use App\Laravel\Keycloak\Admin\Representations\UserRepresentationBuilder;
 use Illuminate\Support\ServiceProvider;
+use Kcharfi\Laravel\Keycloak\Admin\Builders\RoleRepresentationBuilderAdapter;
+use Kcharfi\Laravel\Keycloak\Admin\Builders\UserRepresentationBuilderAdapter;
+use Kcharfi\Laravel\Keycloak\Admin\Representations\RoleRepresentationBuilder;
+use Kcharfi\Laravel\Keycloak\Admin\Representations\UserRepresentationBuilder;
 
 class KeycloakServiceProvider extends ServiceProvider
 {

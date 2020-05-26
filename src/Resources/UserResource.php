@@ -1,13 +1,13 @@
 <?php
 
-namespace App\Laravel\Keycloak\Admin\Resources;
+namespace Kcharfi\Laravel\Keycloak\Admin\Resources;
 
-use App\Laravel\Keycloak\Admin\Exceptions\CannotDeleteUserException;
-use App\Laravel\Keycloak\Admin\Exceptions\CannotRetrieveUserException;
-use App\Laravel\Keycloak\Admin\Hydrator\HydratorInterface;
-use App\Laravel\Keycloak\Admin\Representations\UserRepresentation;
-use App\Laravel\Keycloak\Admin\Representations\UserRepresentationInterface;
 use GuzzleHttp\ClientInterface;
+use Kcharfi\Laravel\Keycloak\Admin\Exceptions\CannotDeleteUserException;
+use Kcharfi\Laravel\Keycloak\Admin\Exceptions\CannotRetrieveUserException;
+use Kcharfi\Laravel\Keycloak\Admin\Hydrator\HydratorInterface;
+use Kcharfi\Laravel\Keycloak\Admin\Representations\UserRepresentation;
+use Kcharfi\Laravel\Keycloak\Admin\Representations\UserRepresentationInterface;
 
 class UserResource implements UserResourceInterface
 {

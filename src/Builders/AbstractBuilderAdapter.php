@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Laravel\Keycloak\Admin\Builders;
+namespace Kcharfi\Laravel\Keycloak\Admin\Builders;
 
 use Illuminate\Support\Str;
 use function call_user_func_array;

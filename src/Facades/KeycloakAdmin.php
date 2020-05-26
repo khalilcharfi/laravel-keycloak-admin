@@ -1,16 +1,16 @@
 <?php
 
-namespace App\Laravel\Keycloak\Admin\Facades;
+namespace Kcharfi\Laravel\Keycloak\Admin\Facades;
 
-use App\Laravel\Keycloak\Admin\Client;
-use App\Laravel\Keycloak\Admin\Resources\ClientResourceInterface;
-use App\Laravel\Keycloak\Admin\Resources\ClientsResourceInterface;
-use App\Laravel\Keycloak\Admin\Resources\RealmResourceInterface;
-use App\Laravel\Keycloak\Admin\Resources\RealmsResourceInterface;
-use App\Laravel\Keycloak\Admin\Resources\RolesResourceInterface;
-use App\Laravel\Keycloak\Admin\Resources\UserResourceInterface;
-use App\Laravel\Keycloak\Admin\Resources\UsersResourceInterface;
 use Illuminate\Support\Facades\Facade;
+use Kcharfi\Laravel\Keycloak\Admin\Client;
+use Kcharfi\Laravel\Keycloak\Admin\Resources\ClientResourceInterface;
+use Kcharfi\Laravel\Keycloak\Admin\Resources\ClientsResourceInterface;
+use Kcharfi\Laravel\Keycloak\Admin\Resources\RealmResourceInterface;
+use Kcharfi\Laravel\Keycloak\Admin\Resources\RealmsResourceInterface;
+use Kcharfi\Laravel\Keycloak\Admin\Resources\RolesResourceInterface;
+use Kcharfi\Laravel\Keycloak\Admin\Resources\UserResourceInterface;
+use Kcharfi\Laravel\Keycloak\Admin\Resources\UsersResourceInterface;
 
 /**
  * @method static UsersResourceInterface users()

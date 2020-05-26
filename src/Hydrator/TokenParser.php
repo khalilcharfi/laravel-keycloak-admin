@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Laravel\Keycloak\Admin\Hydrator;
+namespace Kcharfi\Laravel\Keycloak\Admin\Hydrator;
 
 class TokenParser
 {

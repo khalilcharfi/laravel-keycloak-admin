@@ -1,15 +1,15 @@
 <?php
 
-namespace App\Laravel\Keycloak\Admin;
+namespace Kcharfi\Laravel\Keycloak\Admin;
 
-use App\Laravel\Keycloak\Admin\Guzzle\DefaultHeadersMiddleware;
-use App\Laravel\Keycloak\Admin\Guzzle\TokenMiddleware;
-use App\Laravel\Keycloak\Admin\Hydrator\Hydrator;
-use App\Laravel\Keycloak\Admin\Resources\ResourceFactory;
-use App\Laravel\Keycloak\Admin\Token\TokenManager;
 use GuzzleHttp\Client as GuzzleClient;
 use GuzzleHttp\ClientInterface;
 use GuzzleHttp\HandlerStack;
+use Kcharfi\Laravel\Keycloak\Admin\Guzzle\DefaultHeadersMiddleware;
+use Kcharfi\Laravel\Keycloak\Admin\Guzzle\TokenMiddleware;
+use Kcharfi\Laravel\Keycloak\Admin\Hydrator\Hydrator;
+use Kcharfi\Laravel\Keycloak\Admin\Resources\ResourceFactory;
+use Kcharfi\Laravel\Keycloak\Admin\Token\TokenManager;
 
 class ClientBuilder
 {

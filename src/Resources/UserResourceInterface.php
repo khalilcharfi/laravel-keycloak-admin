@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Laravel\Keycloak\Admin\Resources;
+namespace Kcharfi\Laravel\Keycloak\Admin\Resources;
 
-use App\Laravel\Keycloak\Admin\Representations\UserRepresentationInterface;
+use Kcharfi\Laravel\Keycloak\Admin\Representations\UserRepresentationInterface;
 
 interface UserResourceInterface
 {

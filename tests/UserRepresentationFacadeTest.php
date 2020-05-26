@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Laravel\Keycloak\Admin\Tests;
+namespace Kcharfi\Laravel\Keycloak\Admin\Tests;
 
-use App\Laravel\Keycloak\Admin\Representations\UserRepresentationInterface;
-use App\Laravel\Keycloak\Admin\Facades\UserRepresentation;
+use Kcharfi\Laravel\Keycloak\Admin\Representations\UserRepresentationInterface;
+use Kcharfi\Laravel\Keycloak\Admin\Facades\UserRepresentation;
 use Illuminate\Foundation\Testing\WithFaker;
 
 class UserRepresentationFacadeTest extends TestCase

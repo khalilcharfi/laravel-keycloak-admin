@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Laravel\Keycloak\Admin\Tests;
+namespace Kcharfi\Laravel\Keycloak\Admin\Tests;
 
-use App\Laravel\Keycloak\Admin\Client;
-use App\Laravel\Keycloak\Admin\Resources\RolesResource;
-use App\Laravel\Keycloak\Admin\Resources\UsersResource;
-use App\Laravel\Keycloak\Admin\Facades\KeycloakAdmin;
+use Kcharfi\Laravel\Keycloak\Admin\Client;
+use Kcharfi\Laravel\Keycloak\Admin\Resources\RolesResource;
+use Kcharfi\Laravel\Keycloak\Admin\Resources\UsersResource;
+use Kcharfi\Laravel\Keycloak\Admin\Facades\KeycloakAdmin;
 use Illuminate\Foundation\Testing\WithFaker;
 use RuntimeException;
 

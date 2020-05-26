@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Laravel\Keycloak\Admin\Builders;
+namespace Kcharfi\Laravel\Keycloak\Admin\Builders;
 
-use App\Laravel\Keycloak\Admin\Representations\RoleRepresentationInterface;
+use Kcharfi\Laravel\Keycloak\Admin\Representations\RoleRepresentationInterface;
 
 /**
  * Class RoleRepresentationBuilderAdapter

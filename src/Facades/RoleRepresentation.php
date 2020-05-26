@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Laravel\Keycloak\Admin\Facades;
+namespace Kcharfi\Laravel\Keycloak\Admin\Facades;
 
-use App\Laravel\Keycloak\Admin\Builders\RoleRepresentationBuilderAdapter;
 use Illuminate\Support\Facades\Facade;
+use Kcharfi\Laravel\Keycloak\Admin\Builders\RoleRepresentationBuilderAdapter;
 
 /**
  * Class UserRepresentation

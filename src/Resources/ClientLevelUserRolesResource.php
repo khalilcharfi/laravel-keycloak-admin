@@ -1,16 +1,16 @@
 <?php
 
-namespace App\Laravel\Keycloak\Admin\Resources;
+namespace Kcharfi\Laravel\Keycloak\Admin\Resources;
 
-use App\Laravel\Keycloak\Admin\Exceptions\CannotAssignRoleException;
-use App\Laravel\Keycloak\Admin\Exceptions\CannotRetrieveUserRoleMappingsException;
-use App\Laravel\Keycloak\Admin\Exceptions\CannotUnlinkRoleException;
-use App\Laravel\Keycloak\Admin\Hydrator\HydratorInterface;
-use App\Laravel\Keycloak\Admin\Representations\RepresentationCollection;
-use App\Laravel\Keycloak\Admin\Representations\RepresentationCollectionInterface;
-use App\Laravel\Keycloak\Admin\Representations\RoleRepresentation;
-use App\Laravel\Keycloak\Admin\Representations\RoleRepresentationInterface;
 use GuzzleHttp\ClientInterface;
+use Kcharfi\Laravel\Keycloak\Admin\Exceptions\CannotAssignRoleException;
+use Kcharfi\Laravel\Keycloak\Admin\Exceptions\CannotRetrieveUserRoleMappingsException;
+use Kcharfi\Laravel\Keycloak\Admin\Exceptions\CannotUnlinkRoleException;
+use Kcharfi\Laravel\Keycloak\Admin\Hydrator\HydratorInterface;
+use Kcharfi\Laravel\Keycloak\Admin\Representations\RepresentationCollection;
+use Kcharfi\Laravel\Keycloak\Admin\Representations\RepresentationCollectionInterface;
+use Kcharfi\Laravel\Keycloak\Admin\Representations\RoleRepresentation;
+use Kcharfi\Laravel\Keycloak\Admin\Representations\RoleRepresentationInterface;
 
 class ClientLevelUserRolesResource implements ClientLevelUserRolesResourceInterface
 {

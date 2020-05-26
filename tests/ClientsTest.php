@@ -1,9 +1,9 @@
 <?php
-namespace App\Laravel\Keycloak\Admin\Tests;
+namespace Kcharfi\Laravel\Keycloak\Admin\Tests;
 
-use App\Laravel\Keycloak\Admin\Representations\ClientRepresentationInterface;
-use App\Laravel\Keycloak\Admin\Representations\RoleRepresentationInterface;
-use App\Laravel\Keycloak\Admin\Tests\Traits\WithTestClient;
+use Kcharfi\Laravel\Keycloak\Admin\Representations\ClientRepresentationInterface;
+use Kcharfi\Laravel\Keycloak\Admin\Representations\RoleRepresentationInterface;
+use Kcharfi\Laravel\Keycloak\Admin\Tests\Traits\WithTestClient;
 
 class ClientsTest extends TestCase
 {

@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Laravel\Keycloak\Admin\Tests;
+namespace Kcharfi\Laravel\Keycloak\Admin\Tests;
 
-use App\Laravel\Keycloak\Admin\Representations\RepresentationCollectionInterface;
-use App\Laravel\Keycloak\Admin\Representations\UserRepresentationBuilder;
-use App\Laravel\Keycloak\Admin\Representations\UserRepresentationInterface;
-use App\Laravel\Keycloak\Admin\Resources\UsersResourceInterface;
-use App\Laravel\Keycloak\Admin\Tests\Traits\WithTemporaryRealm;
+use Kcharfi\Laravel\Keycloak\Admin\Representations\RepresentationCollectionInterface;
+use Kcharfi\Laravel\Keycloak\Admin\Representations\UserRepresentationBuilder;
+use Kcharfi\Laravel\Keycloak\Admin\Representations\UserRepresentationInterface;
+use Kcharfi\Laravel\Keycloak\Admin\Resources\UsersResourceInterface;
+use Kcharfi\Laravel\Keycloak\Admin\Tests\Traits\WithTemporaryRealm;
 
 class UsersResourceTest extends TestCase
 {

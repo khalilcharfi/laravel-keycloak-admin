@@ -1,13 +1,13 @@
 <?php
 
-namespace App\Laravel\Keycloak\Admin\Tests;
+namespace Kcharfi\Laravel\Keycloak\Admin\Tests;
 
-use App\Laravel\Keycloak\Admin\Exceptions\CannotDeleteRoleException;
-use App\Laravel\Keycloak\Admin\Representations\RoleRepresentationBuilder;
-use App\Laravel\Keycloak\Admin\Representations\RoleRepresentationBuilderInterface;
-use App\Laravel\Keycloak\Admin\Representations\RoleRepresentationInterface;
-use App\Laravel\Keycloak\Admin\Resources\RolesResourceInterface;
-use App\Laravel\Keycloak\Admin\Tests\Traits\WithTemporaryRealm;
+use Kcharfi\Laravel\Keycloak\Admin\Exceptions\CannotDeleteRoleException;
+use Kcharfi\Laravel\Keycloak\Admin\Representations\RoleRepresentationBuilder;
+use Kcharfi\Laravel\Keycloak\Admin\Representations\RoleRepresentationBuilderInterface;
+use Kcharfi\Laravel\Keycloak\Admin\Representations\RoleRepresentationInterface;
+use Kcharfi\Laravel\Keycloak\Admin\Resources\RolesResourceInterface;
+use Kcharfi\Laravel\Keycloak\Admin\Tests\Traits\WithTemporaryRealm;
 
 class RolesResourceTest extends TestCase
 {

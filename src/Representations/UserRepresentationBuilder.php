@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Laravel\Keycloak\Admin\Representations;
+namespace Kcharfi\Laravel\Keycloak\Admin\Representations;
 
-use App\Laravel\Keycloak\Admin\Hydrator\Hydrator;
+use Kcharfi\Laravel\Keycloak\Admin\Hydrator\Hydrator;
 use function array_key_exists;
 use function in_array;
 use function is_array;

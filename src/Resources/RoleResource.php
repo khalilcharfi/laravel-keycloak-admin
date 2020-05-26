@@ -1,13 +1,13 @@
 <?php
 
-namespace App\Laravel\Keycloak\Admin\Resources;
+namespace Kcharfi\Laravel\Keycloak\Admin\Resources;
 
-use App\Laravel\Keycloak\Admin\Exceptions\CannotDeleteRoleException;
-use App\Laravel\Keycloak\Admin\Exceptions\CannotRetrieveRoleRepresentationException;
-use App\Laravel\Keycloak\Admin\Hydrator\HydratorInterface;
-use App\Laravel\Keycloak\Admin\Representations\RoleRepresentation;
-use App\Laravel\Keycloak\Admin\Representations\RoleRepresentationInterface;
 use GuzzleHttp\ClientInterface;
+use Kcharfi\Laravel\Keycloak\Admin\Exceptions\CannotDeleteRoleException;
+use Kcharfi\Laravel\Keycloak\Admin\Exceptions\CannotRetrieveRoleRepresentationException;
+use Kcharfi\Laravel\Keycloak\Admin\Hydrator\HydratorInterface;
+use Kcharfi\Laravel\Keycloak\Admin\Representations\RoleRepresentation;
+use Kcharfi\Laravel\Keycloak\Admin\Representations\RoleRepresentationInterface;
 use function json_decode;
 
 class RoleResource implements RoleResourceInterface

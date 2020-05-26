@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Laravel\Keycloak\Admin\Resources;
+namespace Kcharfi\Laravel\Keycloak\Admin\Resources;
 
-use App\Laravel\Keycloak\Admin\Exceptions\CannotAssignRoleException;
-use App\Laravel\Keycloak\Admin\Exceptions\CannotDeleteRoleException;
-use App\Laravel\Keycloak\Admin\Hydrator\HydratorInterface;
-use App\Laravel\Keycloak\Admin\Representations\RoleRepresentationInterface;
 use GuzzleHttp\ClientInterface;
+use Kcharfi\Laravel\Keycloak\Admin\Exceptions\CannotAssignRoleException;
+use Kcharfi\Laravel\Keycloak\Admin\Exceptions\CannotDeleteRoleException;
+use Kcharfi\Laravel\Keycloak\Admin\Hydrator\HydratorInterface;
+use Kcharfi\Laravel\Keycloak\Admin\Representations\RoleRepresentationInterface;
 
 class RealmLevelUserRolesResource implements RealmLevelUserRolesResourceInterface
 {

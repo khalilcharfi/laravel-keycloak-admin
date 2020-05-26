@@ -1,7 +1,7 @@
 <?php
 
 
-use App\Laravel\Keycloak\Admin\KeycloakServiceProvider;
+use Kcharfi\Laravel\Keycloak\Admin\KeycloakServiceProvider;
 
 
 abstract class TestCase extends \PHPUnit\Framework\TestCase

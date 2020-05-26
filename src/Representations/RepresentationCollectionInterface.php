@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Laravel\Keycloak\Admin\Representations;
+namespace Kcharfi\Laravel\Keycloak\Admin\Representations;
 
 use ArrayAccess;
 use Countable;

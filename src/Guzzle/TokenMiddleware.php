@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Laravel\Keycloak\Admin\Guzzle;
+namespace Kcharfi\Laravel\Keycloak\Admin\Guzzle;
 
-use App\Laravel\Keycloak\Admin\Token\TokenManager;
+use Kcharfi\Laravel\Keycloak\Admin\Token\TokenManager;
 use Psr\Http\Message\RequestInterface;
 use function array_key_exists;
 use function parse_url;

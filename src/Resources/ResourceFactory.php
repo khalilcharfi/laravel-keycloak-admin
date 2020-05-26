@@ -1,13 +1,13 @@
 <?php
 
-namespace App\Laravel\Keycloak\Admin\Resources;
+namespace Kcharfi\Laravel\Keycloak\Admin\Resources;
 
-use App\Laravel\Keycloak\Admin\Hydrator\HydratorInterface;
-use App\Laravel\Keycloak\Admin\Representations\ClientRepresentationBuilder;
-use App\Laravel\Keycloak\Admin\Representations\RealmRepresentationBuilder;
-use App\Laravel\Keycloak\Admin\Representations\RoleRepresentationBuilder;
-use App\Laravel\Keycloak\Admin\Representations\UserRepresentationBuilder;
 use GuzzleHttp\ClientInterface;
+use Kcharfi\Laravel\Keycloak\Admin\Hydrator\HydratorInterface;
+use Kcharfi\Laravel\Keycloak\Admin\Representations\ClientRepresentationBuilder;
+use Kcharfi\Laravel\Keycloak\Admin\Representations\RealmRepresentationBuilder;
+use Kcharfi\Laravel\Keycloak\Admin\Representations\RoleRepresentationBuilder;
+use Kcharfi\Laravel\Keycloak\Admin\Representations\UserRepresentationBuilder;
 
 class ResourceFactory implements ResourceFactoryInterface
 {

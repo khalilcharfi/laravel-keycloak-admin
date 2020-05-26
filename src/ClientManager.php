@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Laravel\Keycloak\Admin;
+namespace Kcharfi\Laravel\Keycloak\Admin;
 
-use App\Laravel\Keycloak\Admin\ClientBuilder;
+use App\Keycloak\Admin\ClientBuilder;
 use Illuminate\Support\Arr;
 use InvalidArgumentException;
 use RuntimeException;

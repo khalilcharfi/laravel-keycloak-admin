@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Laravel\Keycloak\Admin\Representations;
+namespace Kcharfi\Laravel\Keycloak\Admin\Representations;
 
 class RoleRepresentation extends AbstractRepresentation implements RoleRepresentationInterface
 {
