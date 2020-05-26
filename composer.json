@@ -1,6 +1,6 @@
 {
     "name": "kcharfi/keycloak-admin",
-    "description": "PHP client for the Keycloak Admin API",
+    "description": "Laravel client for the Keycloak Admin API",
     "type": "library",
     "license": "MIT",
     "authors": [
