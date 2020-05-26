@@ -1,0 +1,16 @@
+version: '3.7'
+services:
+  app:
+    build:
+      context: ./docker/app
+      dockerfile: Dockerfile
+    image: app
+    volumes:
+     - .:/var/www/html
+    ports:
+     - "${APP_PORT}:80"
+    networks:
+     - network
+networks:
+  network:
+    driver: "bridge"

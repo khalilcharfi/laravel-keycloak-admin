@@ -1,0 +1,47 @@
+image: registry.gitlab.com/scito-performance/laravel-keycloak-admin:latest
+
+services:
+  - name: jboss/keycloak:latest
+    alias: keycloak
+
+variables:
+  DB_VENDOR: h2
+  KEYCLOAK_USER: admin
+  KEYCLOAK_PASSWORD: secret
+
+stages:
+  - build
+  - test
+  - deploy
+
+.change_file_permissions: &change_file_permissions |
+  find . -type f -not -path "./vendor/*" -exec chmod 664 {} \;
+  find . -type d -not -path "./vendor/*" -exec chmod 775 {} \;
+
+composer:
+  stage: build
+  cache:
+    key: ${CI_COMMIT_REF_SLUG}-composer
+    paths:
+      - vendor/
+  script:
+    - composer install --prefer-dist --no-ansi --no-interaction --no-progress --no-scripts --dev
+  artifacts:
+    expire_in: 1 month
+    paths:
+      - vendor/
+
+phpunit:
+  stage: test
+  dependencies:
+    - composer
+  script:
+    - vendor/phpunit/phpunit/phpunit --coverage-text --colors=never
+
+codestyle:
+  stage: test
+  dependencies:
+    - composer
+  allow_failure: true
+  script:
+    - vendor/squizlabs/php_codesniffer/bin/phpcs --standard=PSR2 --extensions=php src

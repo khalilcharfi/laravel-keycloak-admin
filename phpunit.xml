@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit bootstrap="vendor/autoload.php"
+         backupGlobals="false"
+         backupStaticAttributes="false"
+         colors="true"
+         verbose="true"
+         convertErrorsToExceptions="true"
+         convertNoticesToExceptions="true"
+         convertWarningsToExceptions="true"
+         processIsolation="true"
+         stopOnFailure="false">
+    <testsuites>
+        <testsuite name="Test Suite">
+            <directory>tests</directory>
+        </testsuite>
+    </testsuites>
+    <filter>
+        <whitelist>
+            <directory suffix=".php">src/</directory>
+        </whitelist>
+    </filter>
+    <php>
+        <env name="KEYCLOAK_ADMIN_CLIENT_ID" value="account" />
+        <env name="KEYCLOAK_ADMIN_GRANT_TYPE" value="password" />
+        <env name="DUSK_SCREENSHOT_DIR" value="var/screenshots" />
+        <env name="DUSK_BASE_URL" value="http://127.0.0.1:8000" />
+    </php>
+</phpunit>
