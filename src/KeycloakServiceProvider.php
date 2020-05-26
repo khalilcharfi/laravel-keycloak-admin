@@ -2,10 +2,10 @@
 
 namespace App\Laravel\Keycloak\Admin;
 
-use App\Laravel\Keycloak\Admin\Representations\RoleRepresentationBuilder;
-use App\Laravel\Keycloak\Admin\Representations\UserRepresentationBuilder;
 use App\Laravel\Keycloak\Admin\Builders\RoleRepresentationBuilderAdapter;
 use App\Laravel\Keycloak\Admin\Builders\UserRepresentationBuilderAdapter;
+use App\Laravel\Keycloak\Admin\Representations\RoleRepresentationBuilder;
+use App\Laravel\Keycloak\Admin\Representations\UserRepresentationBuilder;
 use Illuminate\Support\ServiceProvider;
 
 class KeycloakServiceProvider extends ServiceProvider

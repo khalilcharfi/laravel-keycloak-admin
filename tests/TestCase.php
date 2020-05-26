@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Laravel\Keycloak\Admin\Tests;
 
-use Illuminate\Foundation\Application;
+use App\Laravel\Keycloak\Admin\KeycloakServiceProvider;
+
 
 abstract class TestCase extends \PHPUnit\Framework\TestCase
 {
