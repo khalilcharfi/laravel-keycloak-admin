@@ -20,7 +20,7 @@ class KeycloakServiceProvider extends ServiceProvider
         $this->publishes([
             __DIR__ . '/../config/keycloak-admin.php' => config_path('keycloak-admin.php'),
         ], 'config');
-        $this->mergeConfigFrom(__DIR__ . '/../config/keycloak-admin.php', 'keycloak-admin');
+/*        $this->mergeConfigFrom(__DIR__ . '/../config/keycloak-admin.php', 'keycloak-admin');*/
     }
 
     /**
