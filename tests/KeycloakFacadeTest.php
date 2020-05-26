@@ -1,11 +1,12 @@
 <?php
-namespace Scito\Laravel\Keycloak\Admin\Tests;
 
+namespace App\Laravel\Keycloak\Admin\Tests;
+
+use App\Keycloak\Admin\Client;
+use App\Keycloak\Admin\Resources\RolesResource;
+use App\Keycloak\Admin\Resources\UsersResource;
+use App\Laravel\Keycloak\Admin\Facades\KeycloakAdmin;
 use Illuminate\Foundation\Testing\WithFaker;
-use Scito\Keycloak\Admin\Client;
-use Scito\Laravel\Keycloak\Admin\Facades\KeycloakAdmin;
-use Scito\Keycloak\Admin\Resources\RolesResource;
-use Scito\Keycloak\Admin\Resources\UsersResource;
 use RuntimeException;
 
 class KeycloakFacadeTest extends TestCase

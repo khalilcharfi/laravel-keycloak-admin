@@ -1,7 +1,8 @@
 <?php
-namespace Scito\Laravel\Keycloak\Admin\Builders;
 
-use Scito\Keycloak\Admin\Representations\UserRepresentationInterface;
+namespace App\Laravel\Keycloak\Admin\Builders;
+
+use App\Keycloak\Admin\Representations\UserRepresentationInterface;
 
 /**
  * Class UserRepresentationBuilderAdapter

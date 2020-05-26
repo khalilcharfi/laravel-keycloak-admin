@@ -20,9 +20,13 @@
         </whitelist>
     </filter>
     <php>
-        <env name="KEYCLOAK_ADMIN_CLIENT_ID" value="account" />
-        <env name="KEYCLOAK_ADMIN_GRANT_TYPE" value="password" />
-        <env name="DUSK_SCREENSHOT_DIR" value="var/screenshots" />
-        <env name="DUSK_BASE_URL" value="http://127.0.0.1:8000" />
+        <env name="SERVER_URL" value="http://keycloak:8080" />
+        <env name="REALM" value="master" />
+        <env name="CLIENT_ID" value="admin-cli" />
+        <env name="USERNAME" value="admin" />
+        <env name="PASSWORD" value="secret" />
+        <env name="GRANT_TYPE" value="password" />
+        <env name="DUSK_SCREENSHOT_DIR" value="tests/Browser/screenshots" />
+        <env name="DUSK_BASE_URL" value="http://keycloak:8080" />
     </php>
 </phpunit>

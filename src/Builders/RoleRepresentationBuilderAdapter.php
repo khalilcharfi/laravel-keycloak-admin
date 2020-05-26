@@ -1,7 +1,8 @@
 <?php
-namespace Scito\Laravel\Keycloak\Admin\Builders;
 
-use Scito\Keycloak\Admin\Representations\RoleRepresentationInterface;
+namespace App\Laravel\Keycloak\Admin\Builders;
+
+use App\Keycloak\Admin\Representations\RoleRepresentationInterface;
 
 /**
  * Class RoleRepresentationBuilderAdapter

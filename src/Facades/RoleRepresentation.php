@@ -1,8 +1,9 @@
 <?php
-namespace Scito\Laravel\Keycloak\Admin\Facades;
 
+namespace App\Laravel\Keycloak\Admin\Facades;
+
+use App\Laravel\Keycloak\Admin\Builders\RoleRepresentationBuilderAdapter;
 use Illuminate\Support\Facades\Facade;
-use Scito\Laravel\Keycloak\Admin\Builders\RoleRepresentationBuilderAdapter;
 
 /**
  * Class UserRepresentation

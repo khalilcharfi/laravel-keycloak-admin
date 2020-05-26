@@ -1,8 +1,9 @@
 <?php
-namespace Scito\Laravel\Keycloak\Admin\Builders;
 
-use function call_user_func_array;
+namespace App\Laravel\Keycloak\Admin\Builders;
+
 use Illuminate\Support\Str;
+use function call_user_func_array;
 use function method_exists;
 
 abstract class AbstractBuilderAdapter

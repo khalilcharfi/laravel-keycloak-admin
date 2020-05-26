@@ -1,4 +1,6 @@
 .idea
 vendor
 .php_cs.cache
-debug.log
+.phpunit.result.cache
+tests/Browser/screenshots/*
+!tests/Browser/screenshots/.gitkeep

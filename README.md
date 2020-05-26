@@ -1,50 +1,20 @@
-# Keycloak Admin API Client for Laravel
+# Keycloak Admin Library
 
-# Install
-
-Install the package with composer
-```
-```
-
-Publish the config file
-
-```
-
-```
-
-# Adding a user
-
-Using representations:
-
+## Basic usage example
 ```php
-
-$user = UserRepresentation
-    ::username($username)
-    ->password($password)
+$client = (new ClientBuilder())
+    ->withServerUrl($server)
+    ->withClientId($clientId)
+    ->withUsername($keycloakUsername)
+    ->withPassword($keycloakPassword)
     ->build();
-KeycloakAdmin::users()->add($user);
-```
-
-Or using the fluent api:
-
-```php
-KeycloakAdmin::users()
+    
+// Add a user
+$client->realm('master')
+    ->users()
     ->create()
     ->username($username)
     ->password($password)
     ->email($email)
     ->save();
-);
-
-// Using an options array
-KeycloakAdmin::users()
-    ->create([
-        'username' => $username,
-        'password' => $password,
-        'email' => $email
-    ])
-    ->save();
-);
-
 ```
-

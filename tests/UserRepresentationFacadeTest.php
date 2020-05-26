@@ -1,9 +1,10 @@
 <?php
-namespace Scito\Laravel\Keycloak\Admin\Tests;
 
+namespace App\Laravel\Keycloak\Admin\Tests;
+
+use App\Keycloak\Admin\Representations\UserRepresentationInterface;
+use App\Laravel\Keycloak\Admin\Facades\UserRepresentation;
 use Illuminate\Foundation\Testing\WithFaker;
-use Scito\Laravel\Keycloak\Admin\Facades\UserRepresentation;
-use Scito\Keycloak\Admin\Representations\UserRepresentationInterface;
 
 class UserRepresentationFacadeTest extends TestCase
 {
@@ -12,7 +13,8 @@ class UserRepresentationFacadeTest extends TestCase
     /**
      * @test
      */
-    public function the_user_representation_facade_creates_an_instance() {
+    public function the_user_representation_facade_creates_an_instance()
+    {
 
         $password = $this->faker->password;
         $username = $this->faker->userName;

@@ -1,15 +1,16 @@
 <?php
-namespace Scito\Laravel\Keycloak\Admin\Facades;
 
+namespace App\Laravel\Keycloak\Admin\Facades;
+
+use App\Keycloak\Admin\Client;
+use App\Keycloak\Admin\Resources\ClientResourceInterface;
+use App\Keycloak\Admin\Resources\ClientsResourceInterface;
+use App\Keycloak\Admin\Resources\RealmResourceInterface;
+use App\Keycloak\Admin\Resources\RealmsResourceInterface;
+use App\Keycloak\Admin\Resources\RolesResourceInterface;
+use App\Keycloak\Admin\Resources\UserResourceInterface;
+use App\Keycloak\Admin\Resources\UsersResourceInterface;
 use Illuminate\Support\Facades\Facade;
-use Scito\Keycloak\Admin\Resources\ClientResourceInterface;
-use Scito\Keycloak\Admin\Resources\ClientsResourceInterface;
-use Scito\Keycloak\Admin\Resources\RealmResourceInterface;
-use Scito\Keycloak\Admin\Resources\RealmsResourceInterface;
-use Scito\Keycloak\Admin\Resources\RolesResourceInterface;
-use Scito\Keycloak\Admin\Resources\UserResourceInterface;
-use Scito\Keycloak\Admin\Client;
-use Scito\Keycloak\Admin\Resources\UsersResourceInterface;
 
 /**
  * @method static UsersResourceInterface users()

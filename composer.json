@@ -1,47 +1,35 @@
 {
-  "name": "scito/laravel-keycloak-admin",
-  "description": "Laravel wrapper for the keycloak admin library",
-  "keywords": [
-    "laravel",
-    "keycloak"
-  ],
-  "homepage": "https://gitlab.com/scito/laravel-keycloak-admin",
-  "license": "MIT",
-  "authors": [
-    {
-      "name": "Maikel van Maurik"
+    "name": "kc/keycloak-admin",
+    "description": "PHP client for the Keycloak Admin API",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Khalil Charfi",
+            "email": "khalilcharfi8@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Kc\\Keycloak\\Admin\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Kc\\Keycloak\\Admin\\Tests\\": "tests/"
+        }
+    },
+    "require": {
+        "php": ">=7.1",
+        "ext-json": "*",
+        "guzzlehttp/guzzle": "^6.5.3",
+        "php-di/phpdoc-reader": "^2.1.1"
+    },
+    "require-dev": {
+        "fzaninotto/faker": "1.9.1",
+        "phpunit/phpunit": "8.5.5",
+        "laravel/dusk": "6.1.0@dev",
+        "symfony/filesystem": "5.0.8",
+        "symfony/finder": "5.0.8@dev",
+        "squizlabs/php_codesniffer": "3.5.5"
     }
-  ],
-  "minimum-stability": "dev",
-  "require": {
-    "scito/keycloak-admin": "~1.0.0"
-  },
-  "autoload": {
-    "psr-4": {
-      "Scito\\Laravel\\Keycloak\\Admin\\": "src/"
-    }
-  },
-  "autoload-dev": {
-    "psr-4": {
-      "Scito\\Laravel\\Keycloak\\Admin\\Tests\\": "tests/"
-    }
-  },
-  "extra": {
-    "laravel": {
-      "providers": [
-        "Scito\\Laravel\\Keycloak\\Admin\\KeycloakServiceProvider"
-      ],
-      "aliases": {
-        "KeycloakAdmin": "Scito\\Laravel\\Keycloak\\Admin\\Facades\\Keycloak"
-      }
-    }
-  },
-  "require-dev": {
-    "phpunit/phpunit": "^7.3@dev",
-    "orchestra/testbench": "^3.7@dev",
-    "squizlabs/php_codesniffer": "^3.4",
-    "laravel/dusk": "^6.0@dev",
-    "symfony/filesystem": "^4.3@dev",
-    "symfony/finder": "^4.3@dev"
-  }
 }

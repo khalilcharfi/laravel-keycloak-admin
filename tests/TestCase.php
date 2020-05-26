@@ -1,11 +1,18 @@
 <?php
-namespace Scito\Laravel\Keycloak\Admin\Tests;
 
-use Orchestra\Testbench\TestCase as Orchestra;
-use Scito\Laravel\Keycloak\Admin\KeycloakServiceProvider;
+namespace App\Keycloak\Admin\Tests;
 
-class TestCase extends Orchestra
+use Illuminate\Foundation\Application;
+
+abstract class TestCase extends \PHPUnit\Framework\TestCase
 {
+    protected function assertValidKeycloakId($id)
+    {
+        $this->assertTrue(
+            filter_var(preg_match('/^([a-z0-9\-]){36}$/', $id), FILTER_VALIDATE_BOOLEAN)
+        );
+    }
+
     protected function setUp(): void
     {
         parent::setUp();
@@ -19,7 +26,7 @@ class TestCase extends Orchestra
     /**
      * Define environment setup.
      *
-     * @param  \Illuminate\Foundation\Application  $app
+     * @param Application $app
      * @return void
      */
     protected function getEnvironmentSetUp($app)

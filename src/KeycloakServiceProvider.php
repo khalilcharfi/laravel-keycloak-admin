@@ -1,11 +1,12 @@
 <?php
-namespace Scito\Laravel\Keycloak\Admin;
 
+namespace App\Laravel\Keycloak\Admin;
+
+use App\Keycloak\Admin\Representations\RoleRepresentationBuilder;
+use App\Keycloak\Admin\Representations\UserRepresentationBuilder;
+use App\Laravel\Keycloak\Admin\Builders\RoleRepresentationBuilderAdapter;
+use App\Laravel\Keycloak\Admin\Builders\UserRepresentationBuilderAdapter;
 use Illuminate\Support\ServiceProvider;
-use Scito\Laravel\Keycloak\Admin\Builders\RoleRepresentationBuilderAdapter;
-use Scito\Laravel\Keycloak\Admin\Builders\UserRepresentationBuilderAdapter;
-use Scito\Keycloak\Admin\Representations\RoleRepresentationBuilder;
-use Scito\Keycloak\Admin\Representations\UserRepresentationBuilder;
 
 class KeycloakServiceProvider extends ServiceProvider
 {
