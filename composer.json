@@ -11,12 +11,12 @@
     ],
     "autoload": {
         "psr-4": {
-            "Kc\\Keycloak\\Admin\\": "src/"
+            "Kcharfi\\Keycloak\\Admin\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Kc\\Keycloak\\Admin\\Tests\\": "tests/"
+            "Kcharfi\\Keycloak\\Admin\\Tests\\": "tests/"
         }
     },
     "require": {
