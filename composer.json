@@ -1,5 +1,5 @@
 {
-    "name": "kc/keycloak-admin",
+    "name": "kcharfi/keycloak-admin",
     "description": "PHP client for the Keycloak Admin API",
     "type": "library",
     "authors": [
