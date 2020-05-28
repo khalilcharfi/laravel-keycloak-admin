@@ -6,6 +6,7 @@ use Kcharfi\Laravel\Keycloak\Admin\Exceptions\AnnotationException;
 use ReflectionClass;
 use ReflectionMethod;
 use ReflectionParameter;
+use ReflectionProperty;
 use Reflector;
 use RuntimeException;
 use SplFileObject;

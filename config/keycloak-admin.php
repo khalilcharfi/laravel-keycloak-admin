@@ -10,6 +10,7 @@ return [
             'realm' => env('KEYCLOAK_ADMIN_REALM'),
             'client-id' => env('KEYCLOAK_ADMIN_CLIENT_ID'),
             'client-secret' => env('KEYCLOAK_ADMIN_CLIENT_SECRET'),
+            'grant-type' => env('KEYCLOAK_ADMIN_GRANT_TYPE'),
             'logging' => [
                 'success-level' => env('KEYCLOAK_ADMIN_LOG_LEVEL_SUCCESS', 'INFO'),
                 'failure-level' => env('KEYCLOAK_ADMIN_LOG_LEVEL_ERROR', 'ERROR'),

@@ -4,6 +4,8 @@ namespace Kcharfi\Laravel\Keycloak\Admin\Token;
 
 use DateInterval;
 use GuzzleHttp\Client;
+use Kcharfi\Laravel\Keycloak\Admin\Config;
+use Kcharfi\Laravel\Keycloak\Admin\Enums\GrantType;
 use RuntimeException;
 use function date_create;
 use function json_decode;
@@ -15,20 +17,14 @@ class TokenManager
      */
     private $tokens;
 
-    private $username;
-
-    private $password;
+    private $config;
 
     private $client;
 
-    private $clientId;
-
-    public function __construct($username, $password, $clientId, Client $client)
+    public function __construct(Config $config, Client $client)
     {
         $this->tokens = [];
-        $this->username = $username;
-        $this->password = $password;
-        $this->clientId = $clientId;
+        $this->config = $config;
         $this->client = $client;
     }
 
@@ -41,14 +37,28 @@ class TokenManager
         if (isset($this->tokens[$realm]) && $this->tokens[$realm]->isValid()) {
             return $this->tokens[$realm];
         }
+        $formParams = [];
+
+        switch ($this->config->getGrantType()) {
+            case GrantType::PASSWORD:
+                $formParams = [
+                    'username' => $this->config->getUsername(),
+                    'password' => $this->config->getPassword(),
+                    'client_id' => $this->config->getClientId(),
+                    'grant_type' => $this->config->getGrantType()
+                ];
+                break;
+            case GrantType::CLIENT_CREDENTIALS:
+                $formParams = [
+                    'client_id' => $this->config->getClientId(),
+                    'client_secret' => $this->config->getClientSecret(),
+                    'grant_type' => $this->config->getGrantType()
+                ];
+                break;
+        }
 
         $response = $this->client->post("/auth/realms/{$realm}/protocol/openid-connect/token", [
-            'form_params' => [
-                'username' => $this->username,
-                'password' => $this->password,
-                'client_id' => $this->clientId,
-                'grant_type' => 'password'
-            ]
+            'form_params' => $formParams
         ]);
 
         if (200 !== $response->getStatusCode()) {

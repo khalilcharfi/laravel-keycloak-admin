@@ -2,9 +2,9 @@
 
 namespace Kcharfi\Laravel\Keycloak\Admin;
 
-use App\Keycloak\Admin\ClientBuilder;
 use Illuminate\Support\Arr;
 use InvalidArgumentException;
+use Kcharfi\Laravel\Keycloak\Admin\Enums\GrantType;
 use RuntimeException;
 
 /**
@@ -55,23 +55,44 @@ class ClientManager
     protected function makeConnection($name)
     {
         $config = $this->configuration($name);
+        $grantType = Arr::get($config, 'grant_type') ?: GrantType::PASSWORD;
+        $clientId = Arr::get($config, 'client-id');
+        $clientSecret = Arr::get($config, 'client-secret');
 
-        if (null === ($username = Arr::get($config, 'username'))) {
-            throw new RuntimeException("Username not set");
+        switch ($grantType) {
+            case GrantType::PASSWORD:
+                if (null === ($username = Arr::get($config, 'username'))) {
+                    throw new RuntimeException("Username not set");
+                }
+                if (null === ($password = Arr::get($config, 'password'))) {
+                    throw new RuntimeException("Password not set");
+                }
+                break;
+
+            case GrantType::CLIENT_CREDENTIALS:
+                if (null === $clientId) {
+                    throw new RuntimeException("client-id not set");
+                }
+                if (null === $clientSecret) {
+                    throw new RuntimeException("client-secret not set");
+                }
+                break;
         }
-        if (null === ($password = Arr::get($config, 'password'))) {
-            throw new RuntimeException("Password not set");
-        }
+
         if (null === ($realm = Arr::get($config, 'realm'))) {
             throw new RuntimeException("Realm not set");
         }
 
-        return (new ClientBuilder())->withServerUrl($config['url'] ?? null)
-            ->withUsername($username)
-            ->withPassword($password)
-            ->withRealm($realm)
-            ->withClientId($config['client-id'] ?? null)
-            ->withClientSecret($config['client-secret'] ?? null)
+        return (new ClientBuilder())
+            ->withConfig(new Config(
+                $realm ?? 'master',
+                $config['url'] ?? null,
+                $clientId ?? null,
+                $clientSecret ?? null,
+                $grantType ?? GrantType::PASSWORD,
+                $username ?? null,
+                $password ?? null
+            ))
             ->build();
     }
 

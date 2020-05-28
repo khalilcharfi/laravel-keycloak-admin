@@ -61,7 +61,7 @@ abstract class AbstractRepresentation
 
     private function convertValue($value)
     {
-        if ($value instanceof Representation) {
+        if ($value instanceof AbstractRepresentation) {
             return $value->toArray();
         } elseif (is_array($value)) {
             $result = [];

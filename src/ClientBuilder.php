@@ -5,6 +5,7 @@ namespace Kcharfi\Laravel\Keycloak\Admin;
 use GuzzleHttp\Client as GuzzleClient;
 use GuzzleHttp\ClientInterface;
 use GuzzleHttp\HandlerStack;
+use Kcharfi\Laravel\Keycloak\Admin\Enums\GrantType;
 use Kcharfi\Laravel\Keycloak\Admin\Guzzle\DefaultHeadersMiddleware;
 use Kcharfi\Laravel\Keycloak\Admin\Guzzle\TokenMiddleware;
 use Kcharfi\Laravel\Keycloak\Admin\Hydrator\Hydrator;
@@ -15,25 +16,43 @@ class ClientBuilder
 {
     private $guzzle;
 
-    private $realm;
-
-    private $serverUrl;
-
-    private $clientId;
-
-    private $clientSecret;
+    private $config;
 
     private $token;
-
-    private $username;
-
-    private $password;
 
     private $tokenManager;
 
     public function __construct()
     {
     }
+
+    /**
+     * @return Config
+     */
+    public function getConfig()
+    {
+        return $this->config;
+    }
+
+    /**
+     * @param Config $config
+     */
+    public function setConfig(Config $config): void
+    {
+        $this->config = $config;
+    }
+
+
+    /**
+     * @param Config $config
+     * @return ClientBuilder
+     */
+    public function withConfig(Config $config): self
+    {
+        $this->config = $config;
+        return $this;
+    }
+
 
     /**
      * @param ClientInterface $guzzle
@@ -71,7 +90,7 @@ class ClientBuilder
      */
     public function withClientId(?string $clientId): self
     {
-        $this->clientId = $clientId;
+        $this->getConfig()->setClientId($clientId);
         return $this;
     }
 
@@ -81,7 +100,17 @@ class ClientBuilder
      */
     public function withClientSecret(?string $secret): self
     {
-        $this->clientSecret = $secret;
+        $this->getConfig()->setClientSecret($secret);
+        return $this;
+    }
+
+    /**
+     * @param null|string $grantType
+     * @return ClientBuilder
+     */
+    public function withGrantType(?string $grantType = GrantType::PASSWORD): self
+    {
+        $this->getConfig()->setGrantType($grantType);
         return $this;
     }
 
@@ -91,7 +120,7 @@ class ClientBuilder
      */
     public function withUsername(string $username): self
     {
-        $this->username = $username;
+        $this->getConfig()->setUsername($username);
         return $this;
     }
 
@@ -101,7 +130,7 @@ class ClientBuilder
      */
     public function withPassword(string $password): self
     {
-        $this->password = $password;
+        $this->getConfig()->setPassword($password);
         return $this;
     }
 
@@ -123,18 +152,19 @@ class ClientBuilder
             $tokenManager = $this->buildTokenManager($guzzle);
         }
 
-        $tokenMiddleware = new TokenMiddleware($tokenManager, $this->realm);
+        $tokenMiddleware = new TokenMiddleware($tokenManager, $this->getConfig()->getRealm());
 
         $stack = HandlerStack::create();
 
         $stack->push($tokenMiddleware);
         $stack->push(new DefaultHeadersMiddleware());
 
-        $client = new GuzzleClient(['http_errors' => false, 'handler' => $stack, 'base_uri' => $this->serverUrl]);
+        $client = new GuzzleClient(['http_errors' => false, 'handler' => $stack,
+            'base_uri' => $this->getConfig()->getUrl()]);
 
         $factory = new ResourceFactory($client, new Hydrator());
 
-        return new Client($factory, $this->realm, $this->clientId);
+        return new Client($factory, $this->getConfig()->getRealm(), $this->getConfig()->getClientId());
     }
 
     /**
@@ -142,11 +172,11 @@ class ClientBuilder
      */
     private function buildGuzzle()
     {
-        return new GuzzleClient(['base_uri' => $this->serverUrl]);
+        return new GuzzleClient(['base_uri' => $this->getConfig()->getUrl()]);
     }
 
     private function buildTokenManager(ClientInterface $guzzle)
     {
-        return new TokenManager($this->username, $this->password, $this->clientId, $guzzle);
+        return new TokenManager($this->getConfig(), $guzzle);
     }
 }
