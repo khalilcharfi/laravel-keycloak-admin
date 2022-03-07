@@ -90,8 +90,8 @@ class ClientManager
                 $clientId ?? null,
                 $clientSecret ?? null,
                 $grantType ?? GrantType::PASSWORD,
-                $username ?? null,
-                $password ?? null
+                $username ?? "",
+                $password ?? ""
             ))
             ->build();
     }
