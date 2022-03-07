@@ -55,7 +55,7 @@ class ClientManager
     protected function makeConnection($name)
     {
         $config = $this->configuration($name);
-        $grantType = Arr::get($config, 'grant_type') ?: GrantType::PASSWORD;
+        $grantType = Arr::get($config, 'grant-type') ?: GrantType::PASSWORD;
         $clientId = Arr::get($config, 'client-id');
         $clientSecret = Arr::get($config, 'client-secret');
 
